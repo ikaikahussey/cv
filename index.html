@@ -195,5 +195,22 @@
             </ul>
         </div>
     </div>
+
+    <footer></footer>
+
+<script>
+    // Function to dynamically render the last modified date
+    document.addEventListener('DOMContentLoaded', function () {
+        const footer = document.createElement('footer');
+        footer.innerHTML = `Last updated: ${new Date(document.lastModified).toLocaleDateString(undefined, {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+          })}`;
+        document.body.appendChild(footer);
+    });
+</script>
+    
 </body>
 </html>
+
